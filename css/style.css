@@ -188,8 +188,12 @@ a {
   justify-content: center;
 }
 
-.skill__list__wrap:not(:first-child) {
+.skill__list__wrap {
   margin-left: 180px;
+}
+
+.skill__list__wrap:first-child {
+  margin-left: 0;
 }
 
 .skill__list__name {
@@ -238,4 +242,77 @@ a {
   color: #fff;
   padding: 20px 0 25px;
   text-align: right;
+}
+
+/* タブレット */
+@media screen and (max-width: 1199px) {
+
+  /* common class */
+  .inner {
+    margin: 0 auto;
+    width: 97%;
+  }
+
+  /* introduction */
+  .introduction {
+    padding-bottom: 25px;
+  }
+
+  .introduction__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .introduction__desc {
+    width: 80%;
+  }
+
+  .introduction__title {
+    margin-top: 20px;
+  }
+
+  /* works */
+  .works__items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .works__item {
+    margin: 0;
+  }
+
+  .works__item:nth-child(3n+1) {
+    margin-top: 80px;
+  }
+
+  .works__contact {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  .works__contact__text {
+    width: 100%;
+  }
+
+  .works__contact__link {
+    align-self: auto;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+
+  /* skill */
+  .skill__list {
+    flex-direction: column;
+  }
+
+  .skill__list__wrap {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 88px;
+  }
+
+  .skill__list__wrap:first-child {
+    margin-top: 0;
+  }
 }
