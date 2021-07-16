@@ -54,6 +54,10 @@ a {
   transition: all .3s;
 }
 
+.header__button__sp {
+  display: none;
+}
+
 /* theme */
 .theme {
   background-color: #f2f2f2;
@@ -62,7 +66,6 @@ a {
 
 .theme__inner {
   text-align: center;
-  margin: 0 auto;
 }
 
 .theme__title {
@@ -249,7 +252,6 @@ a {
 
   /* common class */
   .inner {
-    margin: 0 auto;
     width: 97%;
   }
 
@@ -314,5 +316,78 @@ a {
 
   .skill__list__wrap:first-child {
     margin-top: 0;
+  }
+}
+
+/* スマホ */
+@media screen and (max-width: 767px) {
+  /* header */
+  .header__button {
+    display: none;
+  }
+
+  .header__button__sp {
+    border: 1px solid#ddd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .header__button__sp__line,
+  .header__button__sp__line::before,
+  .header__button__sp__line::after {
+    content: "";
+    height: 2px;
+    width: 20px;
+    background-color: #ccc;
+  }
+
+  .header__button__sp__line {
+    position: relative;
+  }
+
+  .header__button__sp__line::before {
+    position: absolute;
+    top: 8px;
+  }
+
+  .header__button__sp__line::after {
+    position: absolute;
+    bottom: 8px;
+  }
+
+  /* theme */
+  .theme {
+    padding: 160px 0 130px;
+  }
+
+  .theme__title {
+    font-size: 80px;
+  }
+
+  .theme__text {
+    display: inline-block;
+    width: 80%;
+  }
+
+  /* introduction */
+  .introduction__desc {
+    width: auto;
+  }
+
+  /* sns */
+  .sns {
+    padding: 50px 0;
+  }
+
+  .sns__list {
+    flex-direction: column;
+  }
+
+  .sns__item {
+    width: 100%;
   }
 }
